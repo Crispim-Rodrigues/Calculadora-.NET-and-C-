@@ -1,0 +1,17 @@
+C:\Users\Railane\source\repos\C sharp\Calculadora\Calculadora\bin\Debug\net7.0-windows\Calculadora.exe
+C:\Users\Railane\source\repos\C sharp\Calculadora\Calculadora\bin\Debug\net7.0-windows\Calculadora.deps.json
+C:\Users\Railane\source\repos\C sharp\Calculadora\Calculadora\bin\Debug\net7.0-windows\Calculadora.runtimeconfig.json
+C:\Users\Railane\source\repos\C sharp\Calculadora\Calculadora\bin\Debug\net7.0-windows\Calculadora.dll
+C:\Users\Railane\source\repos\C sharp\Calculadora\Calculadora\bin\Debug\net7.0-windows\Calculadora.pdb
+C:\Users\Railane\source\repos\C sharp\Calculadora\Calculadora\obj\Debug\net7.0-windows\Calculadora.csproj.AssemblyReference.cache
+C:\Users\Railane\source\repos\C sharp\Calculadora\Calculadora\obj\Debug\net7.0-windows\Calculadora.Calculadora.resources
+C:\Users\Railane\source\repos\C sharp\Calculadora\Calculadora\obj\Debug\net7.0-windows\Calculadora.csproj.GenerateResource.cache
+C:\Users\Railane\source\repos\C sharp\Calculadora\Calculadora\obj\Debug\net7.0-windows\Calculadora.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Railane\source\repos\C sharp\Calculadora\Calculadora\obj\Debug\net7.0-windows\Calculadora.AssemblyInfoInputs.cache
+C:\Users\Railane\source\repos\C sharp\Calculadora\Calculadora\obj\Debug\net7.0-windows\Calculadora.AssemblyInfo.cs
+C:\Users\Railane\source\repos\C sharp\Calculadora\Calculadora\obj\Debug\net7.0-windows\Calculadora.csproj.CoreCompileInputs.cache
+C:\Users\Railane\source\repos\C sharp\Calculadora\Calculadora\obj\Debug\net7.0-windows\Calculadora.dll
+C:\Users\Railane\source\repos\C sharp\Calculadora\Calculadora\obj\Debug\net7.0-windows\refint\Calculadora.dll
+C:\Users\Railane\source\repos\C sharp\Calculadora\Calculadora\obj\Debug\net7.0-windows\Calculadora.pdb
+C:\Users\Railane\source\repos\C sharp\Calculadora\Calculadora\obj\Debug\net7.0-windows\Calculadora.genruntimeconfig.cache
+C:\Users\Railane\source\repos\C sharp\Calculadora\Calculadora\obj\Debug\net7.0-windows\ref\Calculadora.dll
