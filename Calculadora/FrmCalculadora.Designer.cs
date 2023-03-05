@@ -60,11 +60,11 @@
             txtResultado.BorderStyle = BorderStyle.None;
             txtResultado.Font = new Font("Segoe UI", 30F, FontStyle.Bold, GraphicsUnit.Point);
             txtResultado.Location = new Point(12, 12);
+            txtResultado.MaxLength = 15;
             txtResultado.Name = "txtResultado";
             txtResultado.Size = new Size(359, 54);
             txtResultado.TabIndex = 20;
             txtResultado.TextAlign = HorizontalAlignment.Right;
-            txtResultado.KeyPress += txtResultado_KeyPress;
             // 
             // btnVirgula
             // 
@@ -74,6 +74,7 @@
             btnVirgula.TabIndex = 23;
             btnVirgula.Text = ",";
             btnVirgula.UseVisualStyleBackColor = true;
+            btnVirgula.Click += AgregarNumero;
             // 
             // btnSubtrair
             // 
@@ -81,8 +82,10 @@
             btnSubtrair.Name = "btnSubtrair";
             btnSubtrair.Size = new Size(67, 59);
             btnSubtrair.TabIndex = 24;
+            btnSubtrair.Tag = "-";
             btnSubtrair.Text = "-";
             btnSubtrair.UseVisualStyleBackColor = true;
+            btnSubtrair.Click += ClickOperador;
             // 
             // btnIgual
             // 
@@ -90,8 +93,10 @@
             btnIgual.Name = "btnIgual";
             btnIgual.Size = new Size(67, 124);
             btnIgual.TabIndex = 25;
+            btnIgual.Tag = "=";
             btnIgual.Text = "=";
             btnIgual.UseVisualStyleBackColor = true;
+            btnIgual.Click += btnIgual_Click;
             // 
             // btnZero
             // 
@@ -139,8 +144,10 @@
             btnMultiplicar.Name = "btnMultiplicar";
             btnMultiplicar.Size = new Size(67, 59);
             btnMultiplicar.TabIndex = 29;
+            btnMultiplicar.Tag = "*";
             btnMultiplicar.Text = "*";
             btnMultiplicar.UseVisualStyleBackColor = true;
+            btnMultiplicar.Click += ClickOperador;
             // 
             // btnSobre1
             // 
@@ -148,7 +155,8 @@
             btnSobre1.Name = "btnSobre1";
             btnSobre1.Size = new Size(67, 59);
             btnSobre1.TabIndex = 30;
-            btnSobre1.Text = "1/x";
+            btnSobre1.Tag = "x2";
+            btnSobre1.Text = "x2";
             btnSobre1.UseVisualStyleBackColor = true;
             // 
             // btn04
@@ -187,8 +195,10 @@
             btnDividir.Name = "btnDividir";
             btnDividir.Size = new Size(67, 59);
             btnDividir.TabIndex = 34;
+            btnDividir.Tag = "/";
             btnDividir.Text = "/";
             btnDividir.UseVisualStyleBackColor = true;
+            btnDividir.Click += ClickOperador;
             // 
             // btnPorcentagem
             // 
@@ -196,8 +206,10 @@
             btnPorcentagem.Name = "btnPorcentagem";
             btnPorcentagem.Size = new Size(67, 59);
             btnPorcentagem.TabIndex = 35;
+            btnPorcentagem.Tag = "%";
             btnPorcentagem.Text = "%";
             btnPorcentagem.UseVisualStyleBackColor = true;
+            btnPorcentagem.Click += ClickOperador;
             // 
             // btn07
             // 
@@ -235,8 +247,10 @@
             btnMaisMenos.Name = "btnMaisMenos";
             btnMaisMenos.Size = new Size(67, 59);
             btnMaisMenos.TabIndex = 39;
+            btnMaisMenos.Tag = "+/-";
             btnMaisMenos.Text = "+/-";
             btnMaisMenos.UseVisualStyleBackColor = true;
+            btnMaisMenos.Click += ClickOperador;
             // 
             // btnRaiz
             // 
@@ -244,6 +258,7 @@
             btnRaiz.Name = "btnRaiz";
             btnRaiz.Size = new Size(67, 59);
             btnRaiz.TabIndex = 40;
+            btnRaiz.Tag = "✓";
             btnRaiz.Text = "✓";
             btnRaiz.UseVisualStyleBackColor = true;
             // 
@@ -253,8 +268,10 @@
             btnSoma.Name = "btnSoma";
             btnSoma.Size = new Size(67, 59);
             btnSoma.TabIndex = 41;
+            btnSoma.Tag = "+";
             btnSoma.Text = "+";
             btnSoma.UseVisualStyleBackColor = true;
+            btnSoma.Click += ClickOperador;
             // 
             // btnLimpar
             // 
