@@ -9,12 +9,17 @@ namespace Calculadora
 
         private void txtResultado_KeyPress(object sender, KeyPressEventArgs e)
         {
+            //não permite digitacao
             e.Handled = true;
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void AgregarNumero(object sender, EventArgs e)
         {
+            var button = ((Button)sender);
+            if (txtResultado.Text == "0")
+                txtResultado.Text = "";
 
+            txtResultado.Text += button.Text;
         }
+
     }
 }
