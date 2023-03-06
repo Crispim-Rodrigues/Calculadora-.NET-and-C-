@@ -1,4 +1,4 @@
-namespace Calculadora
+﻿namespace Calculadora
 {
     public partial class Calculadora : Form
     {
@@ -25,8 +25,8 @@ namespace Calculadora
 
             if (operador == '+')
             {
-               txtResultado.Text = (numero1+ numero2).ToString();
-               numero1 = Convert.ToDouble(txtResultado.Text);
+                txtResultado.Text = (numero1 + numero2).ToString();
+                numero1 = Convert.ToDouble(txtResultado.Text);
             }
             else if (operador == '-')
             {
@@ -40,8 +40,17 @@ namespace Calculadora
             }
             else if (operador == '/')
             {
-                txtResultado.Text = (numero1 / numero2).ToString();
-                numero1 = Convert.ToDouble(txtResultado.Text);
+                if (txtResultado.Text != "0")
+                {
+                    txtResultado.Text = (numero1 / numero2).ToString();
+                    numero1 = Convert.ToDouble(txtResultado.Text);
+                }
+                else
+                {
+                    msn.Text = "Não é possivel dividir por Zero";
+                    msn.Visible = true;
+                }
+
             }
         }
 
@@ -50,10 +59,63 @@ namespace Calculadora
             var botton = ((Button)sender);
             numero1 = Convert.ToDouble(txtResultado.Text);
             operador = Convert.ToChar(botton.Tag);
+            if (operador == '✓')
+            {
+                numero1 = Math.Sqrt(numero1);
+                txtResultado.Text = numero1.ToString();
+            }
+            else if (operador == '²')
+            {
+                numero1 = Math.Pow(numero1, 2);
+                txtResultado.Text = numero1.ToString();
+            }
+            else if (operador == '%')
+            {
+                numero1 = numero1 / 100;
+                txtResultado.Text = numero1.ToString();
+            }
+            else
+            {
+                txtResultado.Text = "0";
+            }
 
-            txtResultado.Text = "0";
         }
 
-        
+        private void btnApagar_Click(object sender, EventArgs e)
+        {
+            if (txtResultado.Text.Length > 1)
+            {
+                txtResultado.Text = txtResultado.Text.Substring(0, txtResultado.Text.Length - 1);
+            }
+            else { txtResultado.Text = "0"; }
+        }
+
+        private void btnVirgula_Click(object sender, EventArgs e)
+        {
+            if (!txtResultado.Text.Contains(","))
+            {
+                txtResultado.Text += ",";
+            }
+        }
+
+        private void btnMaisMenos_Click(object sender, EventArgs e)
+        {
+            numero1 = Convert.ToDouble(txtResultado.Text);
+            numero1 *= -1;
+            txtResultado.Text = numero1.ToString();
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            numero1 = 0;
+            numero2 = 0;
+            txtResultado.Text = "0";
+            operador = '\0';
+        }
+
+        private void btnLimparTodos_Click(object sender, EventArgs e)
+        {
+            txtResultado.Text = "0";
+        }
     }
 }

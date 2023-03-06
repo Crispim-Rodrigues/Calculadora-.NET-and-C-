@@ -52,6 +52,7 @@
             btnLimpar = new Button();
             btnLimparTodos = new Button();
             btnApagar = new Button();
+            msn = new Label();
             SuspendLayout();
             // 
             // txtResultado
@@ -74,7 +75,7 @@
             btnVirgula.TabIndex = 23;
             btnVirgula.Text = ",";
             btnVirgula.UseVisualStyleBackColor = true;
-            btnVirgula.Click += AgregarNumero;
+            btnVirgula.Click += btnVirgula_Click;
             // 
             // btnSubtrair
             // 
@@ -155,9 +156,10 @@
             btnSobre1.Name = "btnSobre1";
             btnSobre1.Size = new Size(67, 59);
             btnSobre1.TabIndex = 30;
-            btnSobre1.Tag = "x2";
-            btnSobre1.Text = "x2";
+            btnSobre1.Tag = "²";
+            btnSobre1.Text = "x²";
             btnSobre1.UseVisualStyleBackColor = true;
+            btnSobre1.Click += ClickOperador;
             // 
             // btn04
             // 
@@ -250,7 +252,7 @@
             btnMaisMenos.Tag = "+/-";
             btnMaisMenos.Text = "+/-";
             btnMaisMenos.UseVisualStyleBackColor = true;
-            btnMaisMenos.Click += ClickOperador;
+            btnMaisMenos.Click += btnMaisMenos_Click;
             // 
             // btnRaiz
             // 
@@ -261,6 +263,7 @@
             btnRaiz.Tag = "✓";
             btnRaiz.Text = "✓";
             btnRaiz.UseVisualStyleBackColor = true;
+            btnRaiz.Click += ClickOperador;
             // 
             // btnSoma
             // 
@@ -281,6 +284,7 @@
             btnLimpar.TabIndex = 42;
             btnLimpar.Text = "C";
             btnLimpar.UseVisualStyleBackColor = true;
+            btnLimpar.Click += btnLimpar_Click;
             // 
             // btnLimparTodos
             // 
@@ -290,6 +294,7 @@
             btnLimparTodos.TabIndex = 43;
             btnLimparTodos.Text = "CE";
             btnLimparTodos.UseVisualStyleBackColor = true;
+            btnLimparTodos.Click += btnLimparTodos_Click;
             // 
             // btnApagar
             // 
@@ -299,12 +304,24 @@
             btnApagar.TabIndex = 44;
             btnApagar.Text = "←";
             btnApagar.UseVisualStyleBackColor = true;
+            btnApagar.Click += btnApagar_Click;
+            // 
+            // msn
+            // 
+            msn.AutoSize = true;
+            msn.Location = new Point(15, 76);
+            msn.Name = "msn";
+            msn.Size = new Size(30, 15);
+            msn.TabIndex = 45;
+            msn.Text = "msn";
+            msn.Visible = false;
             // 
             // Calculadora
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(380, 436);
+            Controls.Add(msn);
             Controls.Add(btnApagar);
             Controls.Add(btnLimparTodos);
             Controls.Add(btnLimpar);
@@ -362,5 +379,6 @@
         private Button btnLimpar;
         private Button btnLimparTodos;
         private Button btnApagar;
+        private Label msn;
     }
 }
